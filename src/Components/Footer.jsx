@@ -3,7 +3,6 @@ import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
-  FaLinkedinIn,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -13,7 +12,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Text */}
         <p className="text-center text-[#7B3C34] md:text-left">
-          &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+          &copy; {new Date().getFullYear()} ToyWorld. All rights reserved.
         </p>
 
         {/* Social Media Icons */}

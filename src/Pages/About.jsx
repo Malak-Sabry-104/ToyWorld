@@ -38,7 +38,7 @@ const About = () => {
         {/* Closing paragraph */}
         <p className="text-center text-gray-600 mt-12">
           We value our customers and always strive to improve. Thank you for
-          choosing us as your go-to store!
+          choosing us!
         </p>
       </section>
     </Layout>
