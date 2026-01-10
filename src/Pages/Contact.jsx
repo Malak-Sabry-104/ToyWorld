@@ -28,13 +28,13 @@ const Contact = () => {
 
   return (
     <Layout>
-    <section className="h-[90vh] max-w-5xl mx-auto px-4 py-16">
+    <section className="md:h-[90vh] h-[112vh] max-w-5xl mx-auto px-4 py-16">
       {/* Title */}
       <h1 className="text-4xl font-bold text-center text-[#7B3C34] mb-8">
         Contact Us
       </h1>
 
-      <div className="flex flex-col md:flex-row gap-12">
+      <div className="flex flex-col  md:flex-row gap-12">
         {/* Contact Info */}
         <div className="md:w-1/2 space-y-6">
           <h2 className="text-2xl font-semibold text-[#7B3C34]">Get in Touch</h2>
@@ -57,7 +57,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="md:w-1/2 bg-white/10 p-6 rounded-lg ring-2 ring-[#D98C92] ">
+        <div className="md:w-1/2  bg-white/10 p-6 rounded-lg ring-2 ring-[#D98C92] ">
           <form onSubmit={handleSubmit} className=" space-y-4">
             <input
               type="text"
@@ -88,7 +88,7 @@ const Contact = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-[#D98C92] text-white py-3 rounded hover:bg-[#BE5C50] transition"
+              className="w-full  bg-[#D98C92] text-white py-3 rounded hover:bg-[#BE5C50] transition"
             >
               Send Message
             </button>
