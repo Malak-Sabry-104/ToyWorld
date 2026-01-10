@@ -4,7 +4,8 @@ const Hero = () => {
   return (
     <>
       <section
-        className="ps-7 md:ps-20 md:pt-10   section-bg flex items-start gap-10 overflow-hidden"
+        className="ps-7 md:ps-20 md:pt-10 
+          section-bg flex items-start gap-10 overflow-hidden"
         style={{ height: "100vh" }}
       >
         <div className="">
@@ -15,7 +16,7 @@ const Hero = () => {
             Cute
             <span className="text-[#BE5C50]">Toys</span> for Cute Kids
           </h1>
-          <p className="italic  font-bold text-[#9C7275] mt-4 w-87.5">
+          <p className="italic  font-bold text-[#9C7275] mt-4 w-80.5 md:w-87.5">
             but all kinds of intellecual games.toys.puzzles in our online store
             and give your child the pleasure of love & entertainment.
           </p>
