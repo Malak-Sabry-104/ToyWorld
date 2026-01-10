@@ -15,7 +15,7 @@ const Cart = () => {
   };
 
   if (cartItems.length === 0) {
-    return <h1 className="text-2xl text-center pt-10">Cart is empty.</h1>;
+    return <h1 className="text-xl text-center pt-11 mb-3">Cart is empty.</h1>;
   }
 
   return (

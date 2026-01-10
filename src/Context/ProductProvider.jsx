@@ -10,22 +10,23 @@ const ProductProvider = ({ children }) => {
 
   // fetch products
   const getProducts = async () => {
-    const response = await axios.get("https://fakestoreapi.com/products/");
-    setProducts(response.data);
+    const response = await axios.get("https://basbosatoystoreapi.giize.com/api/products");
+    setProducts(response.data.data);
   };
   // fetch categoriees
   const getCategories = async () => {
     const response = await axios.get(
-      "https://fakestoreapi.com/products/categories"
+      "https://basbosatoystoreapi.giize.com/api/categories"
     );
-    setCategories(response.data);
+    console.log(response.data.data)
+    setCategories(response.data.data);
   };
   // fetch products by category
   const getProductsByCategory = async (category) => {
     const response = await axios.get(
-      `https://fakestoreapi.com/products/category/${category}`
+      `https://basbosatoystoreapi.giize.com/api/products/category/${category.id}`
     );
-    setProducts(response.data);
+    setProducts(response.data.data);
   };
   useEffect(() => {
     getProducts();

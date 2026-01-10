@@ -35,7 +35,7 @@ const ProductList = () => {
   return (
     <>
       <section className="pb-6">
-        <div className="flex gap-4 flex-wrap mt-10 items-center ">
+        <div className="flex md:justify-start justify-center gap-4 flex-wrap mt-10 items-center ">
           <button
             type="button"
             onClick={() => handleCategoryClick("All")}
@@ -51,21 +51,24 @@ const ProductList = () => {
             All
           </button>
 
+
+
           {categories.map((category) => (
+            
             <button
               key={category.id}
               type="button"
               onClick={() => handleCategoryClick(category)}
               className={`px-4 py-2 cursor-pointer ring-2 
                 text-[#7B3C34] ring-[#d98c92] rounded-lg
-                 transition-colors duration-200
+                 transition-colors duration-200 
                 ${
                   activeCategory === category
                     ? "bg-[#D98C92] "
                     : "ring-[#D98C92]  hover:bg-[#D98C92]"
                 }`}
             >
-              {category}
+              {category.name}
             </button>
           ))}
         </div>
@@ -74,9 +77,9 @@ const ProductList = () => {
           {products.slice(0, visible).map((product) => (
             <Card
               key={product.id}
-              image={product.image}
+              image={product.image_url}
               price={product.price}
-              title={product.title}
+              title={product.name}
               id={product.id}
             />
           ))}
