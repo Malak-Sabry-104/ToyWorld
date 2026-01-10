@@ -28,13 +28,13 @@ const Cart = () => {
           className="flex gap-6 mb-6 p-4 border rounded-lg items-center"
         >
           <img
-            src={item.image}
-            alt={item.title}
+            src={item.image_url}
+            alt={item.name}
             className="w-24 h-24 object-contain"
           />
 
           <div className="flex-1">
-            <h2 className="font-semibold">{item.title}</h2>
+            <h2 className="font-semibold">{item.name}</h2>
             <p className="text-[#7B3C34] font-bold">${item.price}</p>
           </div>
 

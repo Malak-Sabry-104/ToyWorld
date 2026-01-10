@@ -1,18 +1,17 @@
 import { useState, useEffect } from "react";
-import { useNavigate, Link, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "axios";
 import ClipLoader from "react-spinners/ClipLoader";
-import { Helmet } from "react-helmet";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   // Fetch product
   const getProduct = async () => {
-    setLoading(true);
     try {
       const response = await axios.get(
         `https://basbosatoystoreapi.giize.com/api/products/${id}`
@@ -42,7 +41,6 @@ const ProductDetails = () => {
     <>
       <title>{product.name}</title>
       <div className="max-w-5xl mx-auto px-4">
-
         {/* Card */}
         <div className="pt-20 rounded-xl p-6 flex flex-col md:flex-row gap-8">
           {/* Image */}
@@ -70,7 +68,9 @@ const ProductDetails = () => {
               ${product.price}
             </p>
 
-            <p className="text-gray-600 leading-relaxed">{product.description}</p>
+            <p className="text-gray-600 leading-relaxed">
+              {product.description}
+            </p>
 
             <button
               onClick={() => {
